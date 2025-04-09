@@ -1,0 +1,73 @@
+{
+    "id": "POM-1",
+    "state": "acknowledged",
+    "priority": "1",
+    "category": "Mobile product order",
+    "requestedCompletionDate": "2019-05-02T08:13:59.506Z",
+    "requestedStartDate": "2019-05-03T08:13:59.506Z",
+    "completionDate": "2019-05-02T08:13:59.506Z",
+    "expectedCompletionDate": "2019-05-02T08:13:59.506Z",
+    "creationDate": "2019-04-30T08:13:59.506Z",
+    "note": [
+    ],
+    "channel": [
+    ],
+    "description": "",
+    "externalId": [
+    ],
+    "productOrderItem": [
+        {
+            "id": "110",
+            "action": "add",
+            "state": "acknowledged",
+            "quantity": 1,
+            "product": {
+                "isBundle": false,
+                "productSpecification": {
+                    "id": "PS-1",
+                    "name": "Mobile Line",
+                    "version": "1",
+                    "@type": "ProductSpecificationRef",
+                    "@baseType": "ProductSpecification"
+                    
+                },
+                "productCharacteristic": [
+                    {
+                        "id": "Char-20",
+                        "name": "cycleCount",
+                        "unitOfMeasure": "Month",
+                        "value": 1,
+                        "valueType": "integer",
+                        "@type": "IntegerCharacteristicValueSpecification"
+                    },
+                    {
+                        "id": "Char-14",
+                        "name": "dataVolumePerDay",
+                        "valueType": "integer",
+                        "unitOfMeasure": "GB",
+                        "value": 1,
+                        "@type": "IntegerCharacteristicValueSpecification"
+                    },
+                    {
+                        "id": "Char-15",
+                        "name": "freeIP",
+                        "valueType": "String",
+                        "value": "My TV Mobile",
+                        "@type": "StringCharacteristicValueSpecification"
+                    }
+                ],
+                "@type": "Product"
+            },
+            "productOffering": {
+                "id": "PO-1",
+                "name": "YOLO35",
+                "@type": "ProductOfferingRef",
+                "@baseType": "ProductOffering"
+            },
+            "@type": "ProductOrderItem"
+        }
+    ],
+    "relatedParty": [
+    ],
+    "@type": "ProductOrder"
+}

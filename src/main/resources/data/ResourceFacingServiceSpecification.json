@@ -1,0 +1,258 @@
+[
+    {
+        "id": "RFS-1",
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/7655",
+        "name": "4G Mobile Line",
+        "description": "This service specification describes a firewall service that can be deployed in customer-premises equipment.",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [
+            {
+                "id": "LR-1",
+                "name": "4G Logical SIM",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            },
+            {
+                "id": "LR-2",
+                "name": "HSS Subscriber Profile",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+        ],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "ResourceFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    },
+    {
+        "id": "RFS-2",
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/7655",
+        "name": "5G Mobile Line",
+        "description": "This service specification describes a firewall service that can be deployed in customer-premises equipment.",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [
+            {
+                "id": "LR-3",
+                "name": "5G Logical SIM",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+        ],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "ResourceFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    },
+    {
+        "id": "RFS-3",
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/7655",
+        "name": "Mobile Unified Package",
+        "description": "This service specification describes a firewall service that can be deployed in customer-premises equipment.",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [
+            {
+                "id": "LR-8",
+                "name": "PCRF Profile",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            },
+            {
+                "id": "LR-7",
+                "name": "PCF Profile",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+            
+        ],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "ResourceFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    },
+    {
+        "id": "RFSS-4",
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/7655",
+        "name": "VoiceMail",
+        "description": "This service specification describes a firewall service that can be deployed in customer-premises equipment.",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [
+            {
+                "id": "LR-10",
+                "name": "VMS Profile",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+        ],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "ResourceFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    },
+    {
+        "id": "RFSS-5",
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/7655",
+        "name": "VAS",
+        "description": "This service specification describes a firewall service that can be deployed in customer-premises equipment.",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [
+            {
+                "id": "LR-8",
+                "name": "PCRF Profile",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            },
+            {
+                "id": "LR-7",
+                "name": "PCF Profile",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+        ],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "ResourceFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    },
+    {
+        "id": "RFSS-6",
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/7655",
+        "name": "eSIM",
+        "description": "This service specification describes a firewall service that can be deployed in customer-premises equipment.",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [
+            {
+                "id": "LR-13",
+                "name": "eSIM Profile",
+                "version": "1.0",
+                "@referredType": "LogicalResourceSpecification",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+        ],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "ResourceFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    }
+]

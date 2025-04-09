@@ -1,0 +1,47 @@
+{
+    "id": "PR-1",
+    "name": "SIM Card",
+    "description": "This resource specification defines an IP router provided by Nokia",
+    "@type": "PhysicalResourceSpecification",
+    "@baseType": "ResourceSpecification",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/PhysicalResourceSpecification.schema.json",
+    "version": "3.2",
+    "validFor": {
+        "startDateTime": "2017-08-12T00:00:00.000Z",
+        "endDateTime": "2018-03-07T00:00:00.000Z"
+    },
+    "lastUpdate": "2017-08-09T00:00:00.000Z",
+    "lifecycleStatus": "Active",
+    "isBundle": false,
+    "category": "Mobile Physical resource",
+    "attachment": [
+    ],
+    "relatedParty": [
+    ],
+    "resourceSpecCharacteristic": [
+        {
+            "name": "Power Supply Option",
+            "description": "The type of power supply that can be chosen",
+            "valueType": "string",
+            "configurable": true,
+            "minCardinality": 1,
+            "maxCardinality": 1,
+            "isUnique": true,
+            "@type": "CharacteristicSpecification",
+            "characteristicValueSpecification": [
+                {
+                    "value": "AC/HVDC",
+                    "@type": "StringCharacteristicValueSpecification"
+                },
+                {
+                    "value": "LVDC",
+                    "@type": "StringCharacteristicValueSpecification"
+                }
+            ]
+        }
+    ],
+    "resourceSpecRelationship": [
+    ],
+    "featureSpecification": [
+    ]
+}

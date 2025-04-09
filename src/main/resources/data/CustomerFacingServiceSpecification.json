@@ -1,0 +1,1284 @@
+[
+    {
+        "id": "CFSS-1",
+        "name": "Mobile Basic Plan",
+        "description": "",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [],
+        "attachment": [],
+        "specCharacteristic": [
+            {
+                "name": "msisdn",
+                "id": "Char-1",
+                "description": "",
+                "valueType": "string",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            },
+            {
+                "name": "usageLimit",
+                "id": "Char-2",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            },
+            {
+                "name": "nationalVoiceMinute",
+                "id": "Char-3",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 500,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            },
+            {
+                "name": "onnetVoiceMinute",
+                "id": "Char-4",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 2000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            },
+            {
+                "name": "offnetVoiceMinute",
+                "id": "Char-5",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "internationVoiceMinute",
+                "id": "Char-6",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 500,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "smsUnits",
+                "id": "Char-7",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 500,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "onnetVnpSmsUnits",
+                "id": "Char-8",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "offnetVnpSmsUnits",
+                "id": "Char-9",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "onnetVnptSmsUnits",
+                "id": "Char-10",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "offnetVnptSmsUnits",
+                "id": "Char-10",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "nationalSmsUnits",
+                "id": "Char-10",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 500,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "internationSmsUnits",
+                "id": "Char-11",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 500,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "mmsUnits",
+                "id": "Char-12",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 500,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "dataVolume",
+                "id": "Char-13",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 100,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 200,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 500,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "MIN",
+                        "value": 1000,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "dataVolumePerDay",
+                "id": "Char-14",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "GB",
+                        "value": 2,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "GB",
+                        "value": 5,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "GB",
+                        "value": 10,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "IntegerCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "freeIP",
+                "id": "Char-15",
+                "description": "",
+                "valueType": "string",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "String",
+                        "value": "Zalo",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "String",
+                        "value": "Facebook",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "String",
+                        "value": "Tiktok",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "String",
+                        "value": "Youtube",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "String",
+                        "value": "Whatsapp",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "communityMaxMember",
+                "id": "Char-16",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "value": 2,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "communityDataVolumePerDay",
+                "id": "Char-17",
+                "description": "",
+                "valueType": "integer",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "integer",
+                        "unitOfMeasure": "GB",
+                        "value": 1,
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "communityMembers",
+                "id": "Char-18",
+                "description": "",
+                "valueType": "string",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+            ,
+            {
+                "name": "contentList",
+                "id": "Char-19",
+                "description": "",
+                "valueType": "string",
+                "configurable": false,
+                "validFor": {
+                    "startDateTime": "2017-08-12T00:00:00.000Z",
+                    "endDateTime": "2021-03-07T00:00:00.000Z"
+                },
+                "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+                "minCardinality": 0,
+                "maxCardinality": 1,
+                "isUnique": true,
+                "regex": "",
+                "extensible": false,
+                "characteristicValueSpecification": [
+                    {
+                        "valueType": "string",
+                        "value": "MyTV SportTV",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "string",
+                        "value": "Galaxy",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "string",
+                        "value": "VieOn",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "string",
+                        "value": "FPT Play",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    },
+                    {
+                        "valueType": "string",
+                        "value": "OnPlus",
+                        "isDefault": true,
+                        "validFor": {
+                            "startDateTime": "00:00:00Z",
+                            "endDateTime": "23:59:59Z"
+                        },
+                        "@type": "StringCharacteristicValueSpecification",
+                        "@baseType": "",
+                        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                    }
+                ],
+                "charSpecRelationship": [],
+                "@type": "CharacteristicSpecification",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+            }
+        ],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [
+            {
+                "id": "RFS-1",
+                "name": "4G Mobile Line",
+                "relationshipType": "dependency",
+                "role": "dependent",
+                "validFor": {
+                    "startDateTime": "2017-08-25T00:00:00.000Z",
+                    "endDateTime": "2021-03-25T00:00:00.000Z"
+                },
+                "@referredType": "ResourceFacingServiceSpecification",
+                "@type": "ServiceSpecRelationship",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecRelationship.schema.json"
+            },
+            {
+                "id": "RFS-2",
+                "name": "5G Mobile Line",
+                "relationshipType": "dependency",
+                "role": "dependent",
+                "validFor": {
+                    "startDateTime": "2017-08-25T00:00:00.000Z",
+                    "endDateTime": "2021-03-25T00:00:00.000Z"
+                },
+                "@referredType": "ResourceFacingServiceSpecification",
+                "@type": "ServiceSpecRelationship",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecRelationship.schema.json"
+            },
+            {
+                "relationshipType": "dependency",
+                "role": "dependent",
+                "id": "RFS-3",
+                "name": "Mobile Unified Package",
+                "validFor": {
+                    "startDateTime": "2017-08-25T00:00:00.000Z",
+                    "endDateTime": "2021-03-25T00:00:00.000Z"
+                },
+                "@referredType": "ResourceFacingServiceSpecification",
+                "@type": "ServiceSpecRelationship",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecRelationship.schema.json"
+            }
+        ],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "CustomerFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    },
+    {
+        "id": "CFSS-2",
+        "name": "Voice Mail",
+        "description": "",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [
+            {
+                "relationshipType": "dependency",
+                "role": "dependent",
+                "id": "RFS-4",
+                "name": "VoiceMail",
+                "validFor": {
+                    "startDateTime": "2017-08-25T00:00:00.000Z",
+                    "endDateTime": "2021-03-25T00:00:00.000Z"
+                },
+                "@referredType": "ResourceFacingServiceSpecification",
+                "@type": "ServiceSpecRelationship",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecRelationship.schema.json"
+            }
+        ],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "CustomerFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    },
+    {
+        "id": "CFSS-3",
+        "name": "VAS",
+        "description": "",
+        "version": "2.1",
+        "validFor": {
+            "startDateTime": "2017-08-23T00:00:00.000Z",
+            "endDateTime": "2021-03-25T00:00:00.000Z"
+        },
+        "lastUpdate": "2020-08-15T00:00:00.000Z",
+        "lifecycleStatus": "Active",
+        "isBundle": false,
+        "resourceSpecification": [
+            {
+                "id": "PR-1",
+                "name": "SIM Card",
+                "version": "1.0",
+                "@referredType": "PhysicalResourceSpecification",
+                "@type": "PhysicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+        ],
+        "attachment": [],
+        "specCharacteristic": [],
+
+        "relatedParty": [],
+        "serviceSpecRelationship": [
+            {
+                "relationshipType": "dependency",
+                "role": "dependent",
+                "id": "RFS-6",
+                "name": "eSIM",
+                "validFor": {
+                    "startDateTime": "2017-08-25T00:00:00.000Z",
+                    "endDateTime": "2021-03-25T00:00:00.000Z"
+                },
+                "@referredType": "ResourceFacingServiceSpecification",
+                "@type": "ServiceSpecRelationship",
+                "@baseType": "",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecRelationship.schema.json"
+            }
+        ],
+
+        "serviceLevelSpecification": [],
+        "constraint": [],
+        "entitySpecRelationship": [],
+        "featureSpecification": [],
+        "@type": "CustomerFacingServiceSpecification",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ResourceFacingServiceSpecification.schema.json",
+        "@baseType": "ServiceSpecification"
+    }
+]

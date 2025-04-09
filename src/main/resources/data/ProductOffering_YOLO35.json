@@ -1,0 +1,255 @@
+{
+    "id": "PO-1",
+    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v5/productOffering/7655",
+    "name": "YOLO35",
+    "description": "YOLO35",
+    "version": "2.1",
+    "validFor": {
+        "startDateTime": "2020-09-23T00:00:00Z",
+        "endDateTime": "2021-08-25T00:00:00Z"
+    },
+    "lastUpdate": "2020-09-27T00:00:00Z",
+    "lifecycleStatus": "Active",
+    "isBundle": false,
+    "isSellable": true,
+    "place": [],
+    "productOfferingCharacteristic": [
+        {
+            "name": "Ưu đãi gói cước",
+            "description": "Ưu đãi gói cước",
+            "valueType": "string",
+            "configurable": false,
+            "productOfferingCharacteristicValue": [
+                {
+                    "valueType": "string",
+                    "value": "1 GB data/ngày (hết dung lượng dừng truy cập)",
+                    "@type": "StringCharacteristicValueSpecification"
+                },
+                {
+                    "valueType": "String",
+                    "value": "Data truy cập ứng dụng MyTV Mobile",
+                    "@type": "StringCharacteristicValueSpecification"
+                }
+            ],
+            "@type": "ProductOfferingCharacteristic"
+        }
+    ],
+    "bundledGroupProductOfferingOption": {},
+    "productSpecification": {
+        "id": "PS-1",
+        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v5/productSpecification/9881",
+        "version": "1.1",
+        "name": "Mobile Line",
+        "@referredType": "ProductSpecification",
+        "@type": "ProductSpecificationRef"
+    },
+    "channel": [],
+    "serviceCandidate": {},
+    "category": [
+        {
+            "id": "2646",
+            "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v5/category/2646",
+            "version": "2.0",
+            "name": "Gói cước di động",
+            "@referredType": "Category",
+            "@type": "CategoryRef"
+        }
+    ],
+    "resourceCandidate": {},
+    "productOfferingTerm": [
+        {
+            "name": "Thuê bao trả trước VinaPhone đang hoạt động 2 chiều",
+            "description": "Thuê bao trả trước VinaPhone đang hoạt động 2 chiều (không nợ đọng, tạm ngưng, hủy, khóa 1 chiều/2 chiều)",
+            "validFor": {
+                "startDateTime": "2020-09-23T00:00:00Z",
+                "endDateTime": "2021-09-23T00:00:00Z"
+            },
+            "@type": "ProductOfferingTerm"
+        }
+    ],
+    "productOfferingPrice": [
+        {
+            "id": "1747",
+            "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v5/productOfferingPrice/1747",
+            "name": "Recurring Monthly Price for Business Firewall",
+            "@referredType": "ProductOfferingPrice",
+            "@type": "ProductOfferingPrice"
+        }
+    ],
+    "agreement": [],
+    "attachment": [],
+    "marketSegment": [],
+    "bundledProductOffering": [],
+    "productOfferingRelationship": [],
+    "prodSpecCharValueUse": [
+        {
+            "id": "Char-20",
+            "name": "cycleCount",
+            "description": "",
+            "valueType": "integer",
+            "configurable": false,
+            "validFor": {
+                "startDateTime": "2017-08-12T00:00:00.000Z",
+                "endDateTime": "2021-03-07T00:00:00.000Z"
+            },
+            "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+            "minCardinality": 0,
+            "maxCardinality": 1,
+            "isUnique": true,
+            "regex": "",
+            "extensible": false,
+            "characteristicValueSpecification": [
+                {
+                    "valueType": "integer",
+                    "unitOfMeasure": "Month",
+                    "value": 1,
+                    "isDefault": true,
+                    "validFor": {
+                        "startDateTime": "00:00:00Z",
+                        "endDateTime": "23:59:59Z"
+                    },
+                    "@type": "IntegerCharacteristicValueSpecification",
+                    "@baseType": "",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                },
+                {
+                    "valueType": "integer",
+                    "unitOfMeasure": "Month",
+                    "value": 2,
+                    "isDefault": false,
+                    "validFor": {
+                        "startDateTime": "00:00:00Z",
+                        "endDateTime": "23:59:59Z"
+                    },
+                    "@type": "IntegerCharacteristicValueSpecification",
+                    "@baseType": "",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                },
+                {
+                    "valueType": "integer",
+                    "unitOfMeasure": "Month",
+                    "value": 4,
+                    "isDefault": false,
+                    "validFor": {
+                        "startDateTime": "00:00:00Z",
+                        "endDateTime": "23:59:59Z"
+                    },
+                    "@type": "IntegerCharacteristicValueSpecification",
+                    "@baseType": "",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                },
+                {
+                    "valueType": "integer",
+                    "unitOfMeasure": "Month",
+                    "value": 6,
+                    "isDefault": false,
+                    "validFor": {
+                        "startDateTime": "00:00:00Z",
+                        "endDateTime": "23:59:59Z"
+                    },
+                    "@type": "IntegerCharacteristicValueSpecification",
+                    "@baseType": "",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                }
+            ],
+            "charSpecRelationship": [],
+            "productSpecification": {
+                "id": "PS-1",
+                "version": "1.1",
+                "name": "Mobile Line",
+                "@referredType": "ProductSpecification",
+                "@type": "ProductSpecificationRef"
+            },
+            "@type": "ProductSpecificationCharacteristicValueUse",
+            "@baseType": "",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/ProductSpecificationCharacteristicValueUse.schema.json"
+        },
+        {
+            "id": "Char-14",
+            "name": "dataVolumePerDay",
+            "description": "",
+            "valueType": "integer",
+            "configurable": false,
+            "validFor": {
+                "startDateTime": "2017-08-12T00:00:00.000Z",
+                "endDateTime": "2021-03-07T00:00:00.000Z"
+            },
+            "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+            "minCardinality": 0,
+            "maxCardinality": 1,
+            "isUnique": true,
+            "regex": "",
+            "extensible": false,
+            "characteristicValueSpecification": [
+                {
+                    "valueType": "integer",
+                    "unitOfMeasure": "GB",
+                    "value": 1,
+                    "isDefault": true,
+                    "validFor": {
+                        "startDateTime": "00:00:00Z",
+                        "endDateTime": "23:59:59Z"
+                    },
+                    "@type": "IntegerCharacteristicValueSpecification",
+                    "@baseType": "",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                }
+            ],
+            "charSpecRelationship": [],
+            "productSpecification": {
+                "id": "PS-1",
+                "version": "1.1",
+                "name": "Mobile Line",
+                "@referredType": "ProductSpecification",
+                "@type": "ProductSpecificationRef"
+            },
+            "@type": "ProductSpecificationCharacteristicValueUse",
+            "@baseType": "",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/ProductSpecificationCharacteristicValueUse.schema.json"
+        },
+        {
+            "id": "Char-15",
+            "name": "freeIP",
+            "description": "",
+            "valueType": "string",
+            "configurable": false,
+            "validFor": {
+                "startDateTime": "2017-08-12T00:00:00.000Z",
+                "endDateTime": "2021-03-07T00:00:00.000Z"
+            },
+            "@valueSchemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/StringCharacteristic.schema.json",
+            "minCardinality": 0,
+            "maxCardinality": 1,
+            "isUnique": true,
+            "regex": "",
+            "extensible": false,
+            "characteristicValueSpecification": [
+                {
+                    "valueType": "String",
+                    "value": "My TV Mobile",
+                    "isDefault": true,
+                    "validFor": {
+                        "startDateTime": "00:00:00Z",
+                        "endDateTime": "23:59:59Z"
+                    },
+                    "@type": "StringCharacteristicValueSpecification",
+                    "@baseType": "",
+                    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicValueSpecification.schema.json"
+                }
+            ],
+            "charSpecRelationship": [],
+            "productSpecification": {
+                "id": "PS-1",
+                "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v5/productSpecification/9881",
+                "version": "1.1",
+                "name": "Robotics999",
+                "@referredType": "ProductSpecification",
+                "@type": "ProductSpecificationRef"
+            },
+            "@type": "ProductSpecificationCharacteristicValueUse",
+            "@baseType": "",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/ProductSpecificationCharacteristicValueUse.schema.json"
+        }
+    ],
+    "@type": "ProductOffering"
+}

@@ -1,0 +1,87 @@
+[
+    {
+        "id": "5351",
+        "href": "https://mycsp.com:8080/tmf-api/serviceInventory/v5/service/5351",
+        "serviceType": "Cloud",
+        "name": "vCPE serial 1355615",
+        "description": "Instantiation of vCPE",
+        "state": "active",
+        "category": "CFS",
+        "isServiceEnabled": true,
+        "hasStarted": true,
+        "startMode": "1",
+        "isStateful": true,
+        "serviceDate": "2018-01-15T12:26:11.747Z",
+        "startDate": "2018-01-15T12:26:11.747Z",
+        "serviceSpecification": {
+            "id": "CFSS-1",
+            "name": "Mobile Basic Plan",
+            "version": "1.0.0",
+            "@type": "ServiceSpecificationRef",
+            "@referredType": "ServiceSpecification"
+        },
+        "feature": [],
+        "serviceCharacteristic": [
+            {
+                "id": "Char-20",
+                "name": "cycleCount",
+                "unitOfMeasure": "Month",
+                "value": 1,
+                "valueType": "integer",
+                "@type": "IntegerCharacteristicValueSpecification"
+            },
+            {
+                "id": "Char-14",
+                "name": "dataVolumePerDay",
+                "valueType": "integer",
+                "unitOfMeasure": "GB",
+                "value": 1,
+                "@type": "IntegerCharacteristicValueSpecification"
+            },
+            {
+                "id": "Char-15",
+                "name": "freeIP",
+                "valueType": "String",
+                "value": "My TV Mobile",
+                "@type": "StringCharacteristicValueSpecification"
+            }
+        ],
+        "serviceRelationship": [],
+        "supportingService": [],
+        "supportingResource": [
+            {
+                "id": "RFS-1",
+                "name": "4G Logical SIM",
+                "version": "1.0",
+                "@referredType": "ResourceFacingService",
+                "@type": "ResourceFacingServiceRef",
+                "@baseType": "ResourceServiceRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            },
+            {
+                "id": "RFS-2",
+                "name": "HSS Subscriber Profile",
+                "version": "1.0",
+                "@referredType": "ResourceFacingService",
+                "@type": "ResourceFacingServiceRef",
+                "@baseType": "ResourceSpecificationRef",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/LogicalResourceSpecificationRef.schema.json"
+            }
+            
+        ],
+        "relatedParty": [],
+        "serviceOrderItem": [
+            {
+                "itemId": "OI-1",
+                "itemAction": "add",
+                "serviceOrderId": "SO-1",
+                "role": "activator",
+                "@referredType": "ServiceOrderItem",
+                "@type": "RelatedServiceOrderItem"
+            }
+        ],
+        "place": [],
+        "note": [],
+        "@type": "Service"
+    }
+]

@@ -1,0 +1,59 @@
+{
+    "id": "ROM-1",
+    "name": "",
+    "category": "Premium",
+    "priority": 0,
+    "description": "7000m of Optical Cable",
+    "expectedCompletionDate": "2020-05-31T20:50:27.275Z",
+    "orderDate": "2020-03-31T20:50:27.275Z",
+    "requestedCompletionDate": "2020-03-31T19:50:43.214Z",
+    "requestedStartDate": "2020-03-31T19:50:43.214Z",
+    "startDate": "2020-03-31T19:50:43.214Z",
+    "orderItem": [
+        {
+            "id": "049eb3108ed5",
+            "quantity": 1,
+            "action": "add",
+            "resource": {
+                "id": "e362d12b54f2",
+                "name": "PCRF Profile",
+                "category": "Mobile Logical Resource",
+                "resourceSpecification": {
+                    "id": "LR-8",
+                    "name": "PCRF Profile",
+                    "@baseType": "ResourceSpecification",
+                    "@type": "LogicalResourceSpecificationRef"
+                },
+                "resourceCharacteristic": [
+                    {
+                        "id": "Char-16",
+                        "name": "dataVolumePerDay",
+                        "valueType": "integer",
+                        "unitOfMeasure": "GB",
+                        "value": 1,
+                        "@type": "IntegerCharacteristicValue"
+                    },
+                    {
+                        "id": "Char-17",
+                        "name": "cycleCount",
+                        "valueType": "integer",
+                        "unitOfMeasure": "Month",
+                        "value": 1,
+                        "@type": "IntegerCharacteristicValue"
+                    },
+                    {
+                        "id": "Char-18",
+                        "name": "freeIP",
+                        "valueType": "String",
+                        "value": "My TV Mobile",
+                        "@type": "StringCharacteristicValue"
+                    }
+                ],
+                "@baseType": "Resource",
+                "@type": "LogicalResource"
+            },
+            "state": "acknowledged"
+        }
+    ],
+    "state": "acknowledged"
+}

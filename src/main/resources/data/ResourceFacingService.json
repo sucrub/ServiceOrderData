@@ -1,0 +1,66 @@
+[
+    {
+        "id": "RFS-1",
+        "name": "vCPE serial 1355615",
+        "description": "Instantiation of vCPE",
+        "serviceType": "Cloud",
+        "state": "active",
+        "category": "RFS",
+        "isServiceEnabled": true,
+        "hasStarted": true,
+        "startMode": "1",
+        "isStateful": true,
+        "serviceDate": "2018-01-15T12:26:11.747Z",
+        "startDate": "2018-01-15T12:26:11.747Z",
+        "serviceSpecification": "",
+        "feature": [],
+        "serviceCharacteristic": [
+            {
+                "id": "Char-20",
+                "name": "cycleCount",
+                "unitOfMeasure": "Month",
+                "value": 1,
+                "valueType": "integer",
+                "@type": "IntegerCharacteristicValueSpecification"
+            },
+            {
+                "id": "Char-14",
+                "name": "dataVolumePerDay",
+                "valueType": "integer",
+                "unitOfMeasure": "GB",
+                "value": 1,
+                "@type": "IntegerCharacteristicValueSpecification"
+            },
+            {
+                "id": "Char-15",
+                "name": "freeIP",
+                "valueType": "String",
+                "value": "My TV Mobile",
+                "@type": "StringCharacteristicValueSpecification"
+            }
+        ],
+        "serviceRelationship": [],
+        "supportingService": [],
+        "supportingResource": [
+            {
+                "id": "LR-8",
+                "name": "PCRF Profile",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/ResourceSpecification.schema.json"
+            },
+            {
+                "id": "LR-7",
+                "name": "PCF Profile",
+                "@type": "LogicalResourceSpecificationRef",
+                "@baseType": "ResourceSpecification",
+                "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/ResourceSpecification.schema.json"
+            }
+        ],
+        "relatedParty": [],
+        "serviceOrderItem": [],
+        "place": [],
+        "note": [],
+        "@type": "Service"
+    }
+]

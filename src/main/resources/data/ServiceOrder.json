@@ -1,0 +1,65 @@
+{
+    "id": "SO-1",
+    "href": "http://serverlocation:port/serviceOrderingManagement/v3/serviceOrder/42",
+    "externalId": "OrangeBSS747",
+    "priority": "1",
+    "description": "Service order description",
+    "category": "TMF resource illustration",
+    "state": "acknowledged",
+    "orderDate": "2018-01-12T09:37:40.508Z",
+    "completionDate": "",
+    "requestedStartDate": "2018-01-15T09:37:40.508Z",
+    "requestedCompletionDate": "2018-01-15T09:37:40.508Z",
+    "expectedCompletionDate": "2018-01-15T09:37:40.508Z",
+    "startDate": "2018-01-12T09:37:40.508Z",
+    "@type": "ServiceOrder",
+    "note": [],
+    "relatedParty": [],
+    "orderItem": [
+        {
+            "id": "OI-1",
+            "action": "add",
+            "state": "acknowledged",
+            "service": {
+                "state": "active",
+                "serviceType": "CFS",
+                "serviceCharacteristic": [
+                    {
+                        "id": "Char-20",
+                        "name": "cycleCount",
+                        "unitOfMeasure": "Month",
+                        "value": 1,
+                        "valueType": "integer",
+                        "@type": "IntegerCharacteristicValueSpecification"
+                    },
+                    {
+                        "id": "Char-14",
+                        "name": "dataVolumePerDay",
+                        "valueType": "integer",
+                        "unitOfMeasure": "GB",
+                        "value": 1,
+                        "@type": "IntegerCharacteristicValueSpecification"
+                    },
+                    {
+                        "id": "Char-15",
+                        "name": "freeIP",
+                        "valueType": "String",
+                        "value": "My TV Mobile",
+                        "@type": "StringCharacteristicValueSpecification"
+                    }
+                ],
+                "serviceSpecification": {
+                    "id": "CFSS-1",
+                    "name": "Mobile Basic Plan",
+                    "version": "1",
+                    "invariantUUID": "456-852-357",
+                    "toscaModelURL": "http//...",
+                    "@type": "ONAPServiceSpec",
+                    "@schemaLocation": "http//my.schemas/OnapServiceSpec.schema.json"
+                },
+                "@type": "Service",
+                "@schemaLocation": "http//my.schemas/Service.schema.json"
+            }
+        }
+    ]
+}
