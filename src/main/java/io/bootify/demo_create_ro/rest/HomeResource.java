@@ -1,146 +1,147 @@
 package io.bootify.demo_create_ro.rest;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import java.util.*;
 
 @RestController
 public class HomeResource {
 
+    private static final DateTimeFormatter ISO_FORMATTER = DateTimeFormatter.ISO_INSTANT; // Thời gian
+
     @PostMapping("/demo")
     public ResponseEntity<?> createRo(@RequestBody Object body) {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            // INPUT SERVICE ORDER
-            String serviceOrder = objectMapper.writeValueAsString(body);
-            Map<String, Object> serviceOrderBody = (Map<String, Object>) body;
+            ObjectMapper mapper = new ObjectMapper();
 
-            InputStream isCFSS = getClass().getClassLoader().getResourceAsStream("data/CustomerFacingServiceSpecification.json");
-            String customerFacingServiceSpecification = new String(isCFSS.readAllBytes(), StandardCharsets.UTF_8);
+            // Convert body sang dạng JSON string và Map để xử lý
+            String serviceOrderJson = mapper.writeValueAsString(body);
+            Map<String, Object> serviceOrderMap = (Map<String, Object>) body;
 
-            InputStream isLogicalRSpec = getClass().getClassLoader().getResourceAsStream("data/LogicalResourceSpecification.json");
-            String logicalResourceSpecification = new String(isLogicalRSpec.readAllBytes(), StandardCharsets.UTF_8);
+            // Load các file spec cần thiết từ resource folder
+            String cfssJson = loadJson("data/CustomerFacingServiceSpecification.json");
+            String logicalSpecJson = loadJson("data/LogicalResourceSpecification.json");
+            String rfssJson = loadJson("data/ResourceFacingServiceSpecification.json");
 
-            // LẤY DANH SÁCH ID CFS
-            List<String> serviceSpecIds = JsonPath.read(serviceOrder, "$.orderItem[*].service.serviceSpecification.id");
+            // Lấy danh sách ID của CustomerFacingService từ Service Order
+            List<String> cfsIds = JsonPath.read(serviceOrderJson, "$.orderItem[*].service.serviceSpecification.id");
 
-            // LẤY CFSS TƯƠNG ỨNG DỰA THEO DANH SÁCH ID CFS BÊN TRÊN
-            List<Object> matchedCFSSpecifications = new ArrayList<>();
-
-            for (String id : serviceSpecIds) {
-                List<Object> matched = JsonPath.read(customerFacingServiceSpecification,
-                        "$[?(@.id == '" + id + "')]");
-                matchedCFSSpecifications.addAll(matched);
+            // Với mỗi CFS, lấy danh sách các RFS Specification ID liên quan từ CFSS
+            List<String> rfssIds = new ArrayList<>();
+            for (String id : cfsIds) {
+                List<String> matched = JsonPath.read(cfssJson, "$[?(@.id == '" + id + "')].serviceSpecRelationship[*].id");
+                rfssIds.addAll(matched);
             }
 
-            String matchedCFSSString = objectMapper.writeValueAsString(matchedCFSSpecifications);
-            // LẤY DANH SÁCH RFS ID
-            List<String> rfsIds = JsonPath.read(matchedCFSSString, "$.*.serviceSpecRelationship[*].id");
-            System.out.println(rfsIds);
-
-            // LẤY DANH SÁCH RFSS TƯƠNG ỨNG VỚI ID BÊN TRÊN
-            List<Object> matchedRFSSpecifications = new ArrayList<>();
-            InputStream isRFSS = getClass().getClassLoader().getResourceAsStream("data/ResourceFacingServiceSpecification.json");
-            String resourceFacingServiceSpecification = new String(isRFSS.readAllBytes(), StandardCharsets.UTF_8);
-            for (String id : rfsIds) {
-                List<Object> matched = JsonPath.read(resourceFacingServiceSpecification,
-                        "$[?(@.id == '" + id + "')]");
-                matchedRFSSpecifications.addAll(matched);
-            }
-
-            String matchedRFSSpecificationsString = objectMapper.writeValueAsString(matchedRFSSpecifications);
-            List<Object> RFSSpecData = JsonPath.read(matchedRFSSpecificationsString, "$.*.resourceSpecification");
-            List<Object> RFSSpec = new ArrayList<>();
-            for (Object sublist : RFSSpecData) {
-                if (sublist instanceof List<?>) {
-                    RFSSpec.addAll((List<?>) sublist);
-                } else {
-                    RFSSpec.add(sublist);
+            // Từ các RFS Spec ID, lấy ra danh sách resourceSpecification bên trong RFSS
+            List<Object> resourceSpecs = new ArrayList<>();
+            for (String id : rfssIds) {
+                List<Map<String, Object>> matchedRFSS = JsonPath.read(rfssJson, "$[?(@.id == '" + id + "')].resourceSpecification");
+                for (Object entry : matchedRFSS) {
+                    if (entry instanceof List<?>) {
+                        resourceSpecs.addAll((List<?>) entry);
+                    } else {
+                        resourceSpecs.add(entry);
+                    }
                 }
             }
 
-            // THIS IS THE LIST OF RFSPEC NEED TO BE WORKING ON
-            System.out.println(RFSSpec);
-
-            // BUILD RESOURCE ORDER
-            Map<String, Object> resourceOrder = new HashMap<>();
-            resourceOrder.put("id", "ROM-1");
-            resourceOrder.put("name", "");
-            resourceOrder.put("category", serviceOrderBody.get("category"));
-            resourceOrder.put("description", serviceOrderBody.get("description"));
-            resourceOrder.put("priority", serviceOrderBody.get("priority"));
-            resourceOrder.put("state", "acknowledgement");
-            resourceOrder.put("expectedCompletionDate", ZonedDateTime.now(java.time.ZoneOffset.UTC)
-                    .format(DateTimeFormatter.ISO_INSTANT));
-            resourceOrder.put("orderDate", ZonedDateTime.now(java.time.ZoneOffset.UTC)
-                    .format(DateTimeFormatter.ISO_INSTANT));
-            resourceOrder.put("requestedCompletionDate", ZonedDateTime.now(java.time.ZoneOffset.UTC)
-                    .format(DateTimeFormatter.ISO_INSTANT));
-            resourceOrder.put("requestedStartDate", ZonedDateTime.now(java.time.ZoneOffset.UTC)
-                    .format(DateTimeFormatter.ISO_INSTANT));
-            resourceOrder.put("startDate", ZonedDateTime.now(java.time.ZoneOffset.UTC)
-                    .format(DateTimeFormatter.ISO_INSTANT));
-
-            // BUILD ORDER ITEMS
-            List<Map<String, Object>> orderItems = new ArrayList<>();
-            for(Object resourceItems : RFSSpec) {
-                Map<String, Object> resourceItemsBody = (Map<String, Object>) resourceItems;
-                List<Object> matched = JsonPath.read(logicalResourceSpecification,
-                        "$[?(@.id == '" + resourceItemsBody.get("id") + "')]");
-                Map<String, Object> logicalRes = (Map<String, Object>) matched.get(0);
-                // get specific resource
-                Map<String, Object> resourceItemsObject = new HashMap<>();
-                resourceItemsObject.put("id", "");
-                resourceItemsObject.put("quantity", 1);
-                resourceItemsObject.put("action", "add");
-                resourceItemsObject.put("state", "acknowledgement");
-                Map<String, Object> resource = new HashMap<>();
-                resource.put("id", "");
-                resource.put("name", logicalRes.get("name"));
-                resource.put("category", logicalRes.get("category"));
-
-                // res specification here
-                Map<String, Object> resourceSpecification = new HashMap<>();
-                resourceSpecification.put("id", logicalRes.get("id"));
-                resourceSpecification.put("name", logicalRes.get("name"));
-                resourceSpecification.put("@baseType", logicalRes.get("@baseType"));
-                resourceSpecification.put("@type", logicalRes.get("@type"));
-
-                resource.put("resourceSpecification", resourceSpecification);
-
-                // res characteristic here // Tạm thời lấy từ body luôn
-                List<Map<String, Object>> resourceCharacteristic = new ArrayList<>();
-                resource.put("resourceCharacteristic", resourceCharacteristic);
-
-                /// /// /// /// ///
-                resource.put("@baseType", "Resource");
-                resource.put("@type", "LogicalResource");
-
-
-                resourceItemsObject.put("resource", resource);
-                orderItems.add(resourceItemsObject);
+            // Lấy danh sách serviceCharacteristic từ Service Order đầu vào (flatten array)
+            List<List<Object>> nestedCharacteristics = JsonPath.read(serviceOrderJson, "$.orderItem[*].service.serviceCharacteristic");
+            List<Object> flatCharacteristics = new ArrayList<>();
+            for (List<Object> innerList : nestedCharacteristics) {
+                flatCharacteristics.addAll(innerList);
             }
-            resourceOrder.put("orderItems", orderItems);
 
+            // Tạo dữ liệu Resource Order dựa trên logical spec + characteristics thu được
+            Map<String, Object> resourceOrder = buildResourceOrder(serviceOrderMap, logicalSpecJson, resourceSpecs, flatCharacteristics);
 
             return ResponseEntity.status(201).body(resourceOrder);
+
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(400).body("Error parsing request body");
         }
     }
 
+    // Đọc nội dung JSON từ file trong resources
+    private String loadJson(String path) throws Exception {
+        try (InputStream is = getClass().getClassLoader().getResourceAsStream(path)) {
+            return new String(is.readAllBytes(), StandardCharsets.UTF_8);
+        }
+    }
+
+    // Xây dựng Resource Order trả về dựa trên danh sách resource spec
+    private Map<String, Object> buildResourceOrder(Map<String, Object> serviceOrderMap, String logicalSpecJson,
+                                                   List<Object> resourceSpecs, List<Object> characteristics) {
+
+        Map<String, Object> ro = new HashMap<>();
+        ZonedDateTime now = ZonedDateTime.now(java.time.ZoneOffset.UTC);
+        String nowStr = now.format(ISO_FORMATTER);
+
+        // Thông tin chung
+        ro.put("id", "ROM-1");
+        ro.put("name", "");
+        ro.put("category", serviceOrderMap.get("category"));
+        ro.put("description", serviceOrderMap.get("description"));
+        ro.put("priority", serviceOrderMap.get("priority"));
+        ro.put("state", "acknowledgement");
+        ro.put("expectedCompletionDate", nowStr);
+        ro.put("orderDate", nowStr);
+        ro.put("requestedCompletionDate", nowStr);
+        ro.put("requestedStartDate", nowStr);
+        ro.put("startDate", nowStr);
+
+        // Danh sách orderItem tương ứng với từng resourceSpec
+        List<Map<String, Object>> orderItems = new ArrayList<>();
+        for (Object specObj : resourceSpecs) {
+            Map<String, Object> specMap = (Map<String, Object>) specObj;
+            String id = (String) specMap.get("id");
+
+            // Tra cứu thông tin chi tiết từ logical spec theo ID
+            List<Map<String, Object>> matchedRes = JsonPath.read(logicalSpecJson, "$[?(@.id == '" + id + "')]");
+            if (matchedRes.isEmpty()) continue;
+
+            Map<String, Object> logicalRes = matchedRes.get(0);
+
+            // resourceSpecification
+            Map<String, Object> resourceSpec = new HashMap<>();
+            resourceSpec.put("id", logicalRes.get("id"));
+            resourceSpec.put("name", logicalRes.get("name"));
+            resourceSpec.put("@baseType", logicalRes.get("@baseType"));
+            resourceSpec.put("@type", logicalRes.get("@type"));
+
+            // resource bên trong orderItem
+            Map<String, Object> resource = new HashMap<>();
+            resource.put("id", "");
+            resource.put("name", logicalRes.get("name"));
+            resource.put("category", logicalRes.get("category"));
+            resource.put("resourceSpecification", resourceSpec);
+            resource.put("resourceCharacteristic", characteristics); // hiện tại lấy từ ServiceOrder
+            resource.put("@baseType", "Resource");
+            resource.put("@type", "LogicalResource");
+
+            // Tạo orderItem hoàn chỉnh
+            Map<String, Object> item = new HashMap<>();
+            item.put("id", "");
+            item.put("quantity", 1);
+            item.put("action", "add");
+            item.put("state", "acknowledgement");
+            item.put("resource", resource);
+
+            orderItems.add(item);
+        }
+
+        ro.put("orderItems", orderItems);
+        return ro;
+    }
 }
